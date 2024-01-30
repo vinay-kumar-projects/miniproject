@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import "./index.css";
 
 const currDate = new Date().toLocaleDateString();
 const currTime = new Date().toLocaleTimeString();
@@ -10,12 +11,12 @@ const img3 = "https://picsum.photos/200/300";
 
 ReactDOM.render(
     <>
-    <h1 contentEditable = "true">Vinay Kumar</h1>
-    <a href='https://picsum.photos' target='_lorem'>
+    <h1 className = "heading" >Vinay Kumar</h1>
+    <div className='img_div'>
     <img src = {img1} alt = "randomImages" />
     <img src = {img2} alt = "randomImages" />
     <img src = {img3} alt = "randomImages" />
-    </a>
+    </div>
     </>,
     document.getElementById("root")
 )
