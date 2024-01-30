@@ -1,41 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import "./index.css";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
 
-const currDate = new Date().toLocaleDateString();
-const currTime = new Date().toLocaleTimeString();
-const img1 = "https://picsum.photos/200/300";
-const img2 = "https://picsum.photos/200/300";
-const img3 = "https://picsum.photos/200/300";
+let currDate = new Date();
+currDate = currDate.getHours();
+let greeting = '';
+let cssStyle = {};
 
-// .heading {
-//     color: #fa9191;
-//     text-transform: capitalize;
-//     text-align: center;
-//     font-weight: bold;
-//     text-shadow: 0px, 2px, 4px, #ffe9cf;
-//     margin: 50px;
-//     font-family: 'Josefin Sans', sans-serif;
-  
-//   }
+if(currDate >= 1 && currDate <12){
+    greeting = 'Good Mornig';
+    cssStyle.color = 'Green';
 
-const heading = {
-    color: "#fa9191",
-    textTransform: "capitalize",
-    textAlign: "center",
-    fontWeight: "bold",
-    fontFamily: "'Josefin Sans', sans-serif",
-    margin: "50px"
+} else if(currDate >=12 && currDate <19){
+    greeting = 'Good AfterNoon';
+    cssStyle.color = 'Orange';
+
+} else {
+    greeting = 'Good Night';
+    cssStyle.color = 'Black';
 }
 
 ReactDOM.render(
     <>
-    <h1 style={heading} >Vinay Kumar</h1>
-    <div className='img_div'>
-    <img src = {img1} alt = "randomImages" />
-    <img src = {img2} alt = "randomImages" />
-    <img src = {img3} alt = "randomImages" />
+    <div>
+    <h1 className='heading'>Hello sir, <span style={cssStyle}> { greeting } </span></h1>
     </div>
     </>,
-    document.getElementById("root")
-)
+    document.getElementById('root')
+);
