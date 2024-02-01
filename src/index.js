@@ -1,21 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import List, {surName, myName, myNames} from './Main';
+import * as ques from './Main';
 
 ReactDOM.render(
     
     <>
-    <ol>
-        <li>
-            {List} {surName}
-        </li>
-        <li>
-            {myName()}
-        </li>
-        <li>
-            {myNames()}
-        </li>
-    </ol>
+        <ol>
+            <li>{ ques.default}</li>
+            <li>{ ques.surName}</li>
+            <li>{ ques.myName()}</li>
+            <li>{ ques.myNames()}</li>
+        </ol>
     </>,
     document.getElementById('root')
 );
