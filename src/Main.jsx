@@ -1,17 +1,19 @@
-const Name = 'Vinay Kumar';
+import React from 'react'
+import {add, sub, mult, div} from './Calc'
 
-const surName = 'Deekonda'; 
+function Body() {
 
-function myName() {
-    let name = 'Vinay';
-    return name;
-}
+return (
+    <>
+    <ul>
+        <li>Add of two numbers is: {add(12,32)}</li>
+        <li>Sub of two numbers is: {sub(65,32)}</li>
+        <li>Multi of two numbers is: {mult(15,53)}</li>
+        <li>Div of two numbers is: {div(20,3)}</li>
+    </ul>
+</>
+)
 
-function myNames() {
-    let names = 'Deekonda';
-    return names;
-}
+};
 
-export default Name;
-
-export {surName, myName, myNames};
+export default Body;
