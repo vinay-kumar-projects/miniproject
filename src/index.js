@@ -1,15 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Heading from './Heading'
-import Para from './Para'
-import List from './List'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import Main from './Main';
 
-
-ReactDOM.render(
-    <>
-    <Heading/>
-    <Para/>
-    <List/>
-    </>,
-    document.getElementById('root')
-);
+ReactDOM.render( <Main />, document.getElementById('root'));
