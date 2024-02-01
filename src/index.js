@@ -1,6 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Main from './Main';
+import List, {surName, myName, myNames} from './Main';
 
-ReactDOM.render( <Main />, document.getElementById('root'));
+ReactDOM.render(
+    
+    <>
+    <ol>
+        <li>
+            {List} {surName}
+        </li>
+        <li>
+            {myName()}
+        </li>
+        <li>
+            {myNames()}
+        </li>
+    </ol>
+    </>,
+    document.getElementById('root')
+);
